@@ -5,13 +5,14 @@
 <?php
 $phrase_1 = "Engage le jeu que je le gagne";
 $phrase_1 = strtolower($phrase_1);
-$phrase_1 = str_replace(' ','', $phrase_1);
-$phrase_1 = strrev($phrase_1);
+$phrase_2 = $phrase_1;
+$phrase_2 = strtolower($phrase_2);
+$phrase_2 = str_replace(' ','', $phrase_2);
+$phrase_2 = strrev($phrase_2);
 
-if($phrase_1 == ){
-    echo "La phrase « Engage le jeu que je le gagne » est palindrome";
-} else {
-    echo "NUL";
-}
+
+echo $phrase_2;
+
+
 // c'est incomplet encore...
 ?>
