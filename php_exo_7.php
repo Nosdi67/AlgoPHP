@@ -9,7 +9,7 @@ Si la catégorie n’est pas gérée, merci de le préciser.
 </p>
 
 <?php
-$Age_Enfant = 2;
+$Age_Enfant = 10;
 
 if ( $Age_Enfant >= 10 && $Age_Enfant <= 11){
     echo "categorie Minime";
@@ -17,7 +17,7 @@ if ( $Age_Enfant >= 10 && $Age_Enfant <= 11){
     echo "Categorie Poussin";
 } elseif ($Age_Enfant >= 8 && $Age_Enfant <=9 ){
     echo "Categorie Pupille";
-} elseif ($Age_Enfant >= 12 ){
+} elseif ($Age_Enfant >= 12  ){
     echo "Categorie Cadet";
 } else {
    echo "Votre enfant n'a pas l'age requit pour integrer notre institution désolé";
