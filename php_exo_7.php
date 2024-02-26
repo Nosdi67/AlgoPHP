@@ -10,7 +10,7 @@ Si la catégorie n’est pas gérée, merci de le préciser.
 
 <?php
 $Age_Enfant = 10;
-
+echo "l'age de l'enfat est: $Age_Enfant <br>";
 if ( $Age_Enfant >= 10 && $Age_Enfant <= 11){
     echo "categorie Minime";
 } elseif ($Age_Enfant >= 6 && $Age_Enfant <= 7 ){

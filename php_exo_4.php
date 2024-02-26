@@ -4,6 +4,7 @@
 
 <?php
 $phrase_1 = "Engage le jeu que je le gagne";
+echo "$phrase_1<br>";
 $phrase_2 = $phrase_1 ;
 $phrase_2 = strtolower($phrase_2);
 $phrase_2 = strrev($phrase_2);
