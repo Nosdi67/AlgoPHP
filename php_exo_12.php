@@ -7,27 +7,27 @@ respective (français ➔ « Salut », anglais ➔ « Hello », espagnol ➔ « 
 
 <?php
 
-$tableau_langues=array("Bonjour","Hello","Hola");
 
 $tableau_prenom=array(
-                 "Anne"=>"fr",
+                 "Anne"=>"fr", 
                  "Rose"=>"en",
                  "Raquel"=>"esp");
-
+                 ksort($tableau_prenom); //ksort c'est pour trier le tableau selon les clés.
 foreach($tableau_prenom as $prenom => $langue){
     
     switch ($langue){
          case "fr":
-            echo "$tableau_langues[0], $prenom<br>";
+            echo "Bonjour, $prenom<br>";
          break;
          case "en":
-            echo "$tableau_langues[1], $prenom<br>";
+            echo "Hello, $prenom<br>";
          break;
-        
-         case "esp";
-            echo "$tableau_langues[2], $prenom<br>";
+         case "esp":
+            echo "Hola, $prenom<br>";
         }           
 }
+echo "<pre>";
 
-
+echo "<pre>";
+print_r($tableau_prenom);
 ?>
