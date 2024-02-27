@@ -33,7 +33,7 @@ class personne{
                                 $_age=$this->_dateDeNaissance->diff(new DateTime());// DateTime vide pour utiliser la date du jour.
                                 echo " " . $_age->y. " ans "; //age->y pour afficher l'age (44 "ans")
             }
-
+ 
             }
 
     $p1 = new personne("DUPONT", "Michel", "1980-02-19") ; //creation d'une nouvelle classe 
