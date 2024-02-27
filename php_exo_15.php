@@ -42,7 +42,7 @@ class personne{
 
     echo $p1->getinfo() . "," ;
     echo " " . $p1->getage();
-    echo "<pre>";
+    echo "<br>";
     echo $p2->getinfo() . "," ;
     echo " " . $p2->getage() ;
     
