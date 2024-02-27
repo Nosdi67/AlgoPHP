@@ -17,27 +17,26 @@ class personne{
 
                         $this->_nom=$_nom;
                         $this->_prenom=$_prenom;
-                        $this->_dateDeNaissance=new DateTime($_dateDeNaissance);
+                        $this->_dateDeNaissance=new DateTime($_dateDeNaissance); /*Convertir le $ en date pour pouvoir 
+                                                                                   bien l'utiliser au moment de l'affichage*/
                         
     }  
 
+            public function getinfo(){
 
+                            return $this->_nom . " " . $this->_prenom . " " . " née le " .  $this->_dateDeNaissance->format('Y-m-d');
+                            // recuperer les info.
+                        }   
+            
+            public function getage(){
 
-    public function getinfo(){
+                                $_age=$this->_dateDeNaissance->diff(new DateTime());// DateTime vide pour utiliser la date du jour.
+                                echo " " . $_age->y. " ans "; //age->y pour afficher l'age (44 "ans")
+            }
 
-                       return $this->_nom . " " . $this->_prenom . " " . " née le " .  $this->_dateDeNaissance->format('Y-m-d');
-                       
-                }   
-    
-    public function getage(){
+            }
 
-                        $_age=$this->_dateDeNaissance->diff(new DateTime());
-                        echo " " . $_age->y. " ans ";
-    }
-
-    }
-
-    $p1 = new personne("DUPONT", "Michel", "1980-02-19") ;
+    $p1 = new personne("DUPONT", "Michel", "1980-02-19") ; //creation d'une nouvelle classe 
     $p2 = new personne("DUCHEMIN", "Alice", "1985-01-17") ;
     
 
