@@ -38,6 +38,6 @@ foreach($capitales as $pays => $capitale){
          
         }
         
-        echo "</tbody></table>" ;
+        echo "</tbody></table>";
 ?>
 
