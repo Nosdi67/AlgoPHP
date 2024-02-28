@@ -4,22 +4,20 @@
 précisant le nom des champs associés.</p>
 
 <?php
-$nomsInput = array("Nom","Prénom","Ville");
+
 
 function afficherInput($nomsInput){
-   
-echo
-    '<label for="Nom">'Nom'<input type="text"></label><br>'
-
-
-    '<label for="Prenom">'Prenom'<input type="text"></label><br>' 
+ 
+    echo '<form>';
     
-    
-    '<label for="Villa">'Ville'<input type="text"></label><br>;
+    foreach($nomsInput as $info){
 
+    echo '<label for="' .$info.'"> ' .$info. ': </label>','<br>',
+         '<input type="text" id="' .$info. '" name="'.$info.'" ><br>';
 }
-
-
+    echo '</form>';    
+}
+$nomsInput = array("Nom","Prénom","Ville");
+afficherInput($nomsInput);
 ?>
 
-   
