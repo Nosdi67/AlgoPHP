@@ -1,4 +1,4 @@
-<h1>Exo 21</h1>
+<h1>Exo 22</h1>
 
 <p>Créer une fonction personnalisée permettant de générer des cases à cocher. On pourra préciser
 dans le tableau associatif si la case est cochée ou non.<br>
