@@ -8,7 +8,7 @@ véhicule.</p>
 
 <?php
 
-class Voitures{
+class Voitures{         //creation de la classe Voiture 
     
     private $_marque;
     private $_modèle;
@@ -18,7 +18,7 @@ class Voitures{
 
 
 
-public function __construct($_marque,$_modèle,$_nbPortes,){
+public function __construct($_marque,$_modèle,$_nbPortes,){  //construction de function
 
     $this->_marque=$_marque;
     $this->_modèle=$_modèle;
@@ -27,7 +27,7 @@ public function __construct($_marque,$_modèle,$_nbPortes,){
     $this->_etat="Stoppé";
     
 }
-public function getMarque(){
+public function getMarque(){        //Les Getter
 
         return  "la marque est: ".$this->_marque. '<br>';
 }
@@ -50,7 +50,7 @@ public function getEtat(){
 }
 
 
-public function getInfo(){
+public function getInfo(){   // un Getter d'info globale 
 
         return  "Info Vehicule " . $this->_marque . '<br>'.
                 "*************************". '<br>'.
@@ -60,58 +60,61 @@ public function getInfo(){
                 " Modèle de la Voture: " . $this->_modèle . '<br>'.
                 " Nombre de portes: " .$this->_nbPortes . '<br>'.
                 " Le Vehicule " . $this->_marque . " " . $this->_modèle . " est " . $this->_etat . '<br>'. 
-                " La Vitesse du véhicule " . $this->_marque . " ".  $this->_modèle. " est de ". $this->_vitesseActuelle . '<br>';
+                " La Vitesse du véhicule " . $this->_marque . " ".  $this->_modèle. " est de ". $this->_vitesseActuelle . ' Km' . '<br>';
 }
 
 
 
 
 
-public function setEtat($_etat){
+public function setEtat($_etat){  // les Setter
 
     $this->_etat=$_etat;
 }
 
 public function setAccelerateur($_vitesse){
 
-    if($this->_etat != " Démarré "){
+    if($this->_etat != " Démarré "){  // si la voiture n'est pas démmaré elle pourra pas avancer
 
         echo " Pour Accélèrer il faut d'abord démarrer le Vehicule! ". '<br>';    
 
     }else{
+        $this->_vitesseActuelle=$_vitesse; //la valeur saisie de la $vitesse sera attribuée a la vitesseActuelle
         echo  " Le Véhicule " . $this->_marque . " demarre " . '<br>';
         echo " Le Véhicule " . $this->_marque . " veut accélèrer de "  . $_vitesse . " Km ";
     }      
 
 }
 
-public function SetRalentisseur(int $_vitesse){
+public function SetRalentisseur(int $_vitesse){ 
 
-        $this->_vitesseActuelle=$this->_vitesseActuelle-$_vitesse ;
+        $this->_vitesseActuelle=$this->_vitesseActuelle-$_vitesse ; //calcule ralentissement
 
-        if($this->_vitesseActuelle<0){
+        if($this->_vitesseActuelle<0){  // si la valeure est inferieur a 0 (-30km par ex), afficher 0km
            $this->_vitesseActuelle=0;
-            echo  "La vitesse du véhicule est de: ".$this->_vitesseActuelle. ' km';
+            echo  "La vitesse du véhicule est de: ".$this->_vitesseActuelle . ' km';
         }else{
 
-            echo " Le Véhicule " . $this->_marque . " ralentit de " . $_vitesse .  ' km ' . '<br>' ;      
+            echo " Le Véhicule " . $this->_marque . " ralentit de " . $_vitesse .  ' km ' . '<br>' ;      //si non afficher le resultat de la soustraction
 }
 }
 }
-$voiture1= new Voitures("Peugeot","408","5");
+$voiture1= new Voitures("Peugeot","408","5"); // les classes Voitures
 $voiture2= new Voitures("Citroen","C4","3");
 
 
 
-$voiture1->setAccelerateur(30);
+
 $voiture1->setEtat(" Démarré ");
 $voiture1->setAccelerateur(30);
 
+
 echo $voiture1->getInfo();
 
-echo $voiture1->SetRalentisseur(20);
 
-echo $voiture1->getVitesse();
+
+
+ 
 
 
 
