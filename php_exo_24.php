@@ -5,8 +5,7 @@ valeurs en paramètre ("Monsieur","Madame","Mademoiselle").</p>
 
 <?php
 
-$tableau=array("Monisuer","Madame","Mademoiselle");
-
+$tableau=array("Monisuer"=>"Masculin","Madame"=>"Féminin","Mademoiselle"=>"Autre");
 function afficherRadio($tableau){
 
     echo '<form>';
@@ -14,10 +13,10 @@ function afficherRadio($tableau){
 
 
 
-foreach($tableau as $genre){
+foreach($tableau as $genre => $sexe){
 
-    echo '<input id="Choix" type="radio" name="genre" value="'.$genre.'" />';
-    echo '<label for="Choix"> '.$genre.' </label>';
+    echo '<input id="Choix" type="radio" name="genre" value="'.$sexe.'" />';
+    echo '<label for="Choix"> '.$sexe.' </label>','<br>';
 }
     
     echo '</form>';
