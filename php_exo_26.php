@@ -5,8 +5,6 @@ chaîne de caractère représentant une date.</p>
 
 <?php
 
-
-
 function formaterDateFr($date = ""){
 
     $formatter = new IntlDateFormatter(
